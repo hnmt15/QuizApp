@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="381.0" styleClass="Main" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hnmt.quizappp.PrimaryController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Quizz App" />
+      <Button mnemonicParsing="false" onAction="#handleQuestionManageMent" styleClass="Button" text="Question" />
+      <Button layoutX="284.0" layoutY="218.0" mnemonicParsing="false" onAction="#handlePractice" styleClass="Button" text="Practice" />
+   </children>
+</VBox>

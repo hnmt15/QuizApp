@@ -28,7 +28,8 @@ public class JdbcConnector {
     }
     
     private JdbcConnector() throws SQLException {
-        this.conn = DriverManager.getConnection("jdbc:mysql://localhost/quizdb", "root", "root");
+        this.conn = DriverManager.getConnection("jdbc:mysql://localhost/quizdb", "root", "admin@123");
+        //người dùng sql root, mk là admin@123
     }
     
     public static JdbcConnector getInstance() throws SQLException {

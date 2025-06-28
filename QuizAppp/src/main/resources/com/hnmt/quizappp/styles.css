@@ -22,9 +22,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 }
 .Button{
     -fx-font-size: 20;
-    -fx-pfe-width: 100;
+    -fx-pref-width: 200;
     -fx-background-color: blue;
-    -fx-text-fill: white;
-    
-    -fx-font-size: 15;
+    -fx-text-fill: white;   
+    -fx-font-weight: bold;
+}
+.Input {
+    -fx-pref-width: 200;
+    -fx-padding: 5;
 }

@@ -14,6 +14,7 @@ com\hnmt\quizappp\SecondaryController.class
 com\hnmt\services\LevelServices.class
 com\hnmt\utils\theme\Theme$3.class
 com\hnmt\utils\theme\Theme$1.class
+com\hnmt\services\QuestionServices.class
 com\hnmt\utils\theme\DarkThemeFactory.class
 com\hnmt\utils\theme\DefaultThemeFactory.class
 com\hnmt\utils\theme\ThemeFactory.class

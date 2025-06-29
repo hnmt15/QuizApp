@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Main" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hnmt.quizappp.QuestionsController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="660.0" styleClass="Main" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hnmt.quizappp.QuestionsController">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Question Manage" />
-      <TextArea prefHeight="137.0" prefWidth="600.0" promptText="Question..." stylesheets="@styles.css" />
-      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Main">
+      <TextArea fx:id="txtContent" prefHeight="26.0" prefWidth="61.0" promptText="Question..." stylesheets="@styles.css" />
+      <HBox prefHeight="59.0" prefWidth="640.0" styleClass="Main" stylesheets="@styles.css">
          <children>
             <ComboBox fx:id="cbCates" prefWidth="150.0" promptText="Danh muc" />
-            <ComboBox prefWidth="150.0" promptText="Muc do" />
+            <ComboBox fx:id="cbLevels" prefWidth="150.0" promptText="Levels" />
          </children>
       </HBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="Main">
+      <VBox fx:id="vboxChoices" prefHeight="127.0" prefWidth="560.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="9.0" prefWidth="530.0" styleClass="Main">
                <children>
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <RadioButton mnemonicParsing="false">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleChoice" />
+                     </toggleGroup></RadioButton>
+                  <TextField styleClass="Input" />
+               </children>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="30.0" prefHeight="43.0" prefWidth="520.0" styleClass="Main">
+               <children>
+                  <RadioButton mnemonicParsing="false" toggleGroup="$toggleChoice" />
+                  <TextField styleClass="Input" />
                </children>
             </HBox>
          </children>
       </VBox>
+      <Button mnemonicParsing="false" onAction="#addChoice" prefHeight="27.0" styleClass="Button" text="Add choice" />
+      <Button mnemonicParsing="false" onAction="#addQuestion" style="-fx-background-color: violet;" styleClass="Button" text="Add question" />
    </children>
 </VBox>

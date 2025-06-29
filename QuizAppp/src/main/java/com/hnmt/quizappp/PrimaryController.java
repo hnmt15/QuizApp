@@ -39,7 +39,7 @@ public class PrimaryController implements Initializable {
 //       stage.setScene(scene);
 //       stage.setTitle("Quiz App");
 //       stage.show();
-        MyStage.getInstance().showStage("question.fxml");
+        MyStage.getInstance().showStage("questions.fxml");
         
     }
     

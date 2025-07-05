@@ -22,4 +22,5 @@ com\hnmt\pojo\Choice.class
 com\hnmt\pojo\Question$Builder.class
 com\hnmt\quizappp\PrimaryController.class
 com\hnmt\utils\theme\LightThemeFactory.class
+com\hnmt\quizappp\PracticeController.class
 com\hnmt\services\CategoryServices.class

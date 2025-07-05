@@ -12,7 +12,7 @@ import javafx.scene.Scene;
  * @author admin
  */
 public class ThemeManager {
-    private static ThemeFactory themeFactory = new DarkThemeFactory();
+    private static ThemeFactory themeFactory = new DefaultThemeFactory();
 
     /**
      * @param aThemeFactory the themeFactory to set

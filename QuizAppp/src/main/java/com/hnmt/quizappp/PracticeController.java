@@ -34,8 +34,10 @@ public class PracticeController implements Initializable {
     private VBox vboxChoices;
     @FXML
     private TextField txtNum;
+      @FXML
+      private Text txtResult;
     private List<Question> questions;
-    private int currentQuestion;
+    private int currentQuestion = 0;
     
     private static final QuestionServices questionServices = new QuestionServices();
     /**
@@ -77,6 +79,25 @@ public class PracticeController implements Initializable {
         if(this.currentQuestion < this.questions.size() - 1){
             this.currentQuestion++;
             this.loadQuestion();
+        }
+    }
+    
+    public void handleCheck (ActionEvent event){
+        Question q = this.questions.get(this.currentQuestion);
+        this.txtResult.getStyleClass().clear(); 
+        for(int i = 0; i<q.getChoices().size(); i++){
+            if(q.getChoices().get(i).isCorrect()){
+                RadioButton r = (RadioButton)this.vboxChoices.getChildren().get(i);
+                if (r.isSelected()){
+                    this.txtResult.setText("Bravo đúng rồi!!!");
+                    this.txtResult.getStyleClass().add("Correct");
+                }
+                else{
+                    this.txtResult.setText("Tiếc quá sai mất giồiii");
+                    this.txtResult.getStyleClass().add("Wrong");
+                }
+                break;
+            }
         }
     }
 }

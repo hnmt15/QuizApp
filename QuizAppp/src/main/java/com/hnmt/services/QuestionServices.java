@@ -113,7 +113,7 @@ public class QuestionServices {
      
      public List<Choice> getChoicesByQuestionId(int questionId) throws SQLException{
         Connection conn = JdbcConnector.getInstance().connect();
-        PreparedStatement stm = conn.prepareCall("SELECT * FROM question WHERE question_id=?");
+        PreparedStatement stm = conn.prepareCall("SELECT * FROM choice WHERE question_id=?");
         stm.setInt(1, questionId);
         ResultSet rs = stm.executeQuery();
 
@@ -121,7 +121,7 @@ public class QuestionServices {
         while (rs.next()) {
             int id = rs.getInt("id");
             String content = rs.getString("content");
-            boolean correct = rs.getBoolean("is correct");
+            boolean correct = rs.getBoolean("is_correct");
 
             choices.add(new Choice(id, content, correct));
         }

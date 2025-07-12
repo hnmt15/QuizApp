@@ -4,20 +4,22 @@
  */
 package com.hnmt.pojo;
 
-
-
 /**
  *
  * @author admin
  */
-
 public class Category {
+
     private int id;
-    private String name;  
+    private String name;
 
     public Category(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category(int id) {
+        this.id = id;
     }
 
     @Override
@@ -52,13 +54,5 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
-    
-    
-    
-    
+
 }
-
-
-
-
-

@@ -7,6 +7,7 @@ package com.hnmt.quizappp;
 import com.hnmt.pojo.Category;
 import com.hnmt.pojo.Level;
 import com.hnmt.pojo.Question;
+import com.hnmt.services.FlyweightFactory;
 import com.hnmt.services.questions.BaseQuestionServices;
 import com.hnmt.services.questions.CategoryQuestionDecorator;
 import com.hnmt.services.questions.LevelQuestionDecorator;
@@ -63,8 +64,8 @@ public class PracticeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             
-            this.cbSearchCates.setItems(FXCollections.observableList(Configs.cateServices.getCates()));
-            this.cbSearchLevels.setItems(FXCollections.observableList(Configs.levelServices.getLevels()));
+            this.cbSearchCates.setItems(FXCollections.observableList(FlyweightFactory.getData(Configs.cateServices, "categories")));
+            this.cbSearchLevels.setItems(FXCollections.observableList(FlyweightFactory.getData(Configs.levelServices, "levels")));
 
         } catch (SQLException ex) {
            

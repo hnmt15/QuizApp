@@ -10,9 +10,12 @@ com\hnmt\quizappp\App.class
 com\hnmt\services\questions\QuestionServices.class
 com\hnmt\pojo\Level.class
 module-info.class
+com\hnmt\services\FlyweightFactory.class
+com\hnmt\services\BaseServices.class
 com\hnmt\pojo\Category.class
 com\hnmt\quizappp\QuestionsController.class
 com\hnmt\services\questions\BaseQuestionServices.class
+com\hnmt\services\questions\LimitQuestionDecorator.class
 com\hnmt\quizappp\SecondaryController.class
 com\hnmt\services\LevelServices.class
 com\hnmt\services\questions\QuestionDecorator.class

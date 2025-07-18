@@ -177,6 +177,7 @@ public class QuestionsController implements Initializable {
         TextField txt = new TextField();
         txt.getStyleClass().add("Input");
 
+        //Tao hbox mới gồm radioButton và textfild
         h.getChildren().addAll(r, txt);
 
         this.vboxChoices.getChildren().add(h);
@@ -212,6 +213,7 @@ public class QuestionsController implements Initializable {
     }
     
     private void loadColumns(){
+        
         TableColumn colId = new TableColumn("Id");
         colId.setCellValueFactory(new PropertyValueFactory("id"));
         colId.setPrefWidth(80);

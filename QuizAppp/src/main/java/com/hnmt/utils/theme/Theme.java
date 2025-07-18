@@ -30,6 +30,5 @@ public enum Theme {
     };
     
     public abstract void updateTheme(Scene scene);
-        
     
 }

@@ -12,6 +12,7 @@ import java.util.List;
  * @author admin
  */
 public class Question {
+
     private int id;
     private String content;
     private String hint;
@@ -19,8 +20,6 @@ public class Question {
     private Category category;
     private Level level;
     private List<Choice> choices;
-    
-    
 
     private Question(Builder builder) {
         this.id = builder.id;
@@ -31,7 +30,9 @@ public class Question {
         this.level = builder.level;
         this.choices = builder.choices;
     }
+
     public static class Builder {
+
         private int id;
         private String content;
         private String hint;
@@ -39,46 +40,47 @@ public class Question {
         private Category category;
         private Level level;
         private List<Choice> choices = new ArrayList<>();
-        
+
         public Builder(String content, Category category, Level level) throws Exception {
-            if (content.isEmpty() || category == null || level == null)
+            if (content.isEmpty() || category == null || level == null) {
                 throw new Exception("Invalid data");
-            
+            }
+
             this.content = content;
             this.category = category;
             this.level = level;
         }
-        
+
         public Builder(int id, String content) {
             this.id = id;
             this.content = content;
 
         }
+
         public Builder setHint(String h) {
             this.hint = h;
             return this;
         }
-        
+
         public Builder setImage(String im) {
             this.image = im;
             return this;
         }
-        
+
         public Builder addChoice(Choice c) {
             this.choices.add(c);
             return this;
         }
-                public Builder addALLChoices(List<Choice> choices) {
+
+        public Builder addALLChoices(List<Choice> choices) {
             this.choices.addAll(choices);
             return this;
         }
-        
-        
+
         public Question build() {
             return new Question(this);
         }
     }
-
 
     /**
      * @return the id
@@ -178,7 +180,4 @@ public class Question {
         this.choices = choices;
     }
 
-
-    
-    
 }

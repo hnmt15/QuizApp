@@ -23,7 +23,7 @@ public abstract class BaseQuestionServices extends BaseServices<Question>{
     public abstract String getSQL(List<Object> params);
 
     @Override
-    public List<Question> getResuTs(ResultSet rs) throws SQLException {
+    public List<Question> getResuts(ResultSet rs) throws SQLException {
         
         List<Question> questions = new ArrayList<>();
         while (rs.next()) {

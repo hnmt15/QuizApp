@@ -27,7 +27,7 @@ public class LevelServices extends BaseServices<Level>{
     }
 
     @Override
-    public List<Level> getResuTs(ResultSet rs) throws SQLException {
+    public List<Level> getResuts(ResultSet rs) throws SQLException {
         List<Level> levels = new ArrayList<>();
         while (rs.next()) {
             int id = rs.getInt("id");

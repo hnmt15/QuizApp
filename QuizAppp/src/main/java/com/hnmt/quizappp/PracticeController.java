@@ -55,7 +55,7 @@ public class PracticeController implements Initializable {
     private List<Question> questions;
     private int currentQuestion = 0;
 
-    private static final QuestionServices questionServices = new QuestionServices();
+//    private static final QuestionServices questionServices = new QuestionServices();
 
     /**
      * Initializes the controller class.

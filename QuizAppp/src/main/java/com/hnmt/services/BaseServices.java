@@ -17,12 +17,12 @@ import java.util.List;
  */
 public abstract class BaseServices<T> {
     public abstract PreparedStatement getStatement(Connection conn) throws  SQLException;
-    public abstract List<T> getResuTs(ResultSet rs) throws SQLException;
+    public abstract List<T> getResuts(ResultSet rs) throws SQLException;
     public List<T> list() throws SQLException{
         Connection conn = JdbcConnector.getInstance().connect();
         PreparedStatement stm = this.getStatement(conn);
 
        
-        return this.getResuTs(stm.executeQuery());
+        return this.getResuts(stm.executeQuery());
     }
 }

@@ -10,7 +10,7 @@
       <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Quizz App" />
       <Button mnemonicParsing="false" onAction="#handleQuestionManageMent" styleClass="Button" text="Question" />
       <Button layoutX="284.0" layoutY="218.0" mnemonicParsing="false" onAction="#handlePractice" styleClass="Button" text="Practice" />
-      <Button layoutX="165.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleAll" styleClass="Button" text="Test" />
+      <Button layoutX="165.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleTest" styleClass="Button" text="Test" />
       <Button layoutX="165.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleAll" styleClass="Button" text="Sign up" />
       <Button layoutX="165.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleAll" styleClass="Button" text="Sign in" />
       <ComboBox fx:id="cbThemes" onAction="#changeTheme" prefWidth="150.0" styleClass="Button" />

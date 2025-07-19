@@ -41,6 +41,7 @@ public class Question {
         private Level level;
         private List<Choice> choices = new ArrayList<>();
 
+        
         public Builder(String content, Category category, Level level) throws Exception {
             if (content.isEmpty() || category == null || level == null) {
                 throw new Exception("Invalid data");
@@ -80,6 +81,11 @@ public class Question {
         public Question build() {
             return new Question(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.content; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
 
     /**

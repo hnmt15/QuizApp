@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Main" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hnmt.quizappp.ExamController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="EXAM" />
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Main">
+         <children>
+            <ComboBox fx:id="cbExamTypes" prefWidth="150.0" />
+            <TextField fx:id="txtNum" promptText="Num of ques..." />
+            <Button mnemonicParsing="false" onAction="#handleStart" text="Start" />
+         </children>
+      </HBox>
+      <ListView fx:id="lvQuesions" prefHeight="200.0" prefWidth="200.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Main">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleFinish" styleClass="Button" text="Finish" />
+            <Button mnemonicParsing="false" onAction="#handleSave" style="-fx-background-color: red;" styleClass="Button" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
